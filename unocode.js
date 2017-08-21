@@ -398,7 +398,7 @@ module.exports = [
               setTimeout(() => {
                 btnAprovarProposta.click();
                 console.log("cliquei no botão Aprova");
-              }, 1000);
+              }, 3000);
             }
           }
         ]
@@ -434,7 +434,7 @@ module.exports = [
               setTimeout(() => {
                 criarTitle.click();
                 console.log("cliquei no botão Aprova");
-              }, 1000);
+              }, 3000);
             }
           },
 
@@ -506,7 +506,7 @@ module.exports = [
               ).singleNodeValue;
               setTimeout(() => {
                 ajusteLiberacaoPL.removeAttribute("style");
-              }, 1000);
+              }, 3000);
             }
           },
           {
@@ -521,7 +521,7 @@ module.exports = [
               ).singleNodeValue;
               setTimeout(() => {
                 ajusteLiberacaoPL.removeAttribute("style");
-              }, 2000);
+              }, 3000);
             }
           },
           {
@@ -596,7 +596,7 @@ module.exports = [
                     );
                     btnAprovarProp.click();
                     console.log("cliquei no botão sozinho");
-                  }, 2000);
+                  }, 3000);
                 });
               }
             }
