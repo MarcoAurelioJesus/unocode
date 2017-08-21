@@ -306,6 +306,12 @@ module.exports = [
         },
         commands: [
           {
+            type: "JSImporter",
+            code: () => {
+             alert("1 Passei ocultar grids")
+            }
+          },
+          {
             type: "HTMLImporter",
             path: "//head",
             html: __webpack_require__(6)
@@ -334,6 +340,12 @@ module.exports = [
           ]
         },
         commands: [
+          {
+            type: "JSImporter",
+            code: () => {
+             alert("2 Passei ocultar Abas")
+            }
+          },
           {
             type: "CSSImporter",
             css: __webpack_require__(0)
@@ -374,6 +386,12 @@ module.exports = [
           {
             type: "JSImporter",
             code: () => {
+             alert("3 Passei click botão fluxo")
+            }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
               var btnAprovarProposta = document.getElementById(
                 "propostaLivre_workflowPropostaLivreButton"
               );
@@ -404,6 +422,12 @@ module.exports = [
           {
             type: "JSImporter",
             code: () => {
+             alert("4 Passei coloca titulo resumo")
+            }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
               var criarTitle = document.getElementById(
                 "propostaLivre_propostaLivreResumoFlowPanel"
               );
@@ -443,6 +467,12 @@ module.exports = [
           {
             type: "CSSImporter",
             css: __webpack_require__(0)
+          },
+          {
+            type: "JSImporter",
+            code: () => {
+             alert("5 Formatei dialog")
+            }
           },
         ]
       },
@@ -467,6 +497,12 @@ module.exports = [
           {
             type: "JSImporter",
             code: () => {
+             alert("click botão aprova denovo")
+            }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
               var criarTitle = document.getElementById(
                 "propostaLivre_propostaLivreResumoFlowPanel"
               );
@@ -480,6 +516,7 @@ module.exports = [
           /*Formata Dialog Fluxo da Precificação*/
 
           {
+            
             type: "JSImporter",
             code: () => {
               setTimeout(() => {
@@ -506,7 +543,13 @@ module.exports = [
           {
             type: "CSSImporter",
             css: __webpack_require__(0)
-          }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
+             alert("Formatei dialog fluxo")
+            }
+          },
         ]
       },
 
@@ -589,7 +632,13 @@ module.exports = [
               );
               removeButtomAP[0].remove();
             }
-          }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
+             alert("remover botão")
+            }
+          },
         ]
       },
 
