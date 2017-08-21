@@ -600,7 +600,13 @@ module.exports = [
                 });
               }
             }
-          }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
+             alert("cliquei no botão sozinho")
+            }
+          },
         ]
       },
 
@@ -643,7 +649,13 @@ module.exports = [
                 });
               }
             }
-          }
+          },
+          {
+            type: "JSImporter",
+            code: () => {
+             alert("Fim!!!!!!!!!!!!!!!!")
+            }
+          },
         ]
       }
     ]
