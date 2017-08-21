@@ -68,15 +68,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -87,7 +81,7 @@ exports.push([module.i, "/*__CSS PRECIFICAÇÃO PROPOSTA LIVRE__*/\r\n\r\n\r\n/*
 
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105,13 +99,13 @@ exports.Util = Util;
 
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(2);
+var util_1 = __webpack_require__(1);
 var ElementHidderCommand = (function () {
     function ElementHidderCommand(type, path) {
         this.type = type;
@@ -157,7 +151,7 @@ exports.ElementHidderCommandWithIncrement = ElementHidderCommandWithIncrement;
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -166,8 +160,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var types_1 = __webpack_require__(12);
 var js_command_1 = __webpack_require__(11);
 var elem_removal_command_1 = __webpack_require__(9);
-var elem_hidder_command_1 = __webpack_require__(3);
-var elem_hidder_command_2 = __webpack_require__(3);
+var elem_hidder_command_1 = __webpack_require__(2);
+var elem_hidder_command_2 = __webpack_require__(2);
 var html_importer_command_1 = __webpack_require__(10);
 var css_importer_command_1 = __webpack_require__(8);
 var configuration = __webpack_require__(7);
@@ -285,7 +279,7 @@ exports.Engine = Engine;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
@@ -314,11 +308,11 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(0)
+            html: __webpack_require__(6)
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(1)
+            css: __webpack_require__(0)
           }
         ]
       },
@@ -341,13 +335,8 @@ module.exports = [
         },
         commands: [
           {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(0)
-          },
-          {
             type: "CSSImporter",
-            css: __webpack_require__(1)
+            css: __webpack_require__(0)
           },
           {
             type: "JSImporter",
@@ -453,13 +442,8 @@ module.exports = [
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(1)
+            css: __webpack_require__(0)
           },
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(0)
-          }
         ]
       },
 
@@ -521,13 +505,9 @@ module.exports = [
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(1)
+            css: __webpack_require__(0)
           },
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(0)
-          }
+          
         ]
       },
 
@@ -580,13 +560,8 @@ module.exports = [
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(1)
+            css: __webpack_require__(0)
           },
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(0)
-          }
         ]
       },
 
@@ -654,11 +629,6 @@ module.exports = [
               }
             }
           },
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(0)
-          }
         ]
       },
 
@@ -702,11 +672,6 @@ module.exports = [
               }
             }
           },
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(0)
-          }
         ]
       }
     ]
@@ -715,7 +680,7 @@ module.exports = [
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -797,6 +762,12 @@ function toComment(sourceMap) {
 
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
+
+/***/ }),
 /* 7 */
 /***/ (function(module, exports) {
 
@@ -833,7 +804,7 @@ exports.CSSImporterCommand = CSSImporterCommand;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(2);
+var util_1 = __webpack_require__(1);
 var ElementRemovalCommand = (function () {
     function ElementRemovalCommand(type, path) {
         this.type = type;
@@ -857,7 +828,7 @@ exports.ElementRemovalCommand = ElementRemovalCommand;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(2);
+var util_1 = __webpack_require__(1);
 var HTMLImporterCommand = (function () {
     function HTMLImporterCommand(type, path, html) {
         this.type = type;
@@ -923,8 +894,8 @@ var CommandType;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var engine_1 = __webpack_require__(4);
-var actionsList = __webpack_require__(5);
+var engine_1 = __webpack_require__(3);
+var actionsList = __webpack_require__(4);
 engine_1.Engine.runActions(actionsList);
 
 
