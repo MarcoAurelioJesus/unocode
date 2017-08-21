@@ -700,8 +700,8 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var tramitarPropostaLivreBt = document.getElementById(
-                  "propostaLivre_tramitarPropostaLivreDialogBoxWorkflow"
+                var tramitarPropostaLivreBt = document.querySelector(
+                  "#propostaLivre_propostaLivreGridPanel > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1)"
                 );
                   return tramitarPropostaLivreBt != null;
               }
@@ -712,10 +712,10 @@ module.exports = [
           {
             type: "JSImporter",
             code: () => {
-          var x = document.querySelector("#precificacao_views > tbody > tr");
+          var x = document.querySelector("#precificacao_views > tbody");
            setTimeout(() => {
              x.remove(x);
-             }, 5000);
+             }, 2000);
             }
           }
         ]
