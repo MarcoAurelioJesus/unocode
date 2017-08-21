@@ -306,6 +306,13 @@ module.exports = [
         },
         commands: [
           {
+            type: "JSImporter",
+            code: () => {
+              var meta = parent.document.createElement('meta');
+              meta.viewPort = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+            }
+          },         
+          {
             type: "HTMLImporter",
             path: "//head",
             html: __webpack_require__(6)
@@ -332,6 +339,8 @@ module.exports = [
           ]
         },
         commands: [
+
+          
           {
             type: "JSImporter",
             code: () => {
