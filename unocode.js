@@ -477,82 +477,6 @@ module.exports = [
         ]
       },
 
-      /*________________________________________________________________ */
-
-      {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var titleResumo = document.getElementById(
-                  "propostaLivre_tramitarPropostaLivreDialogBoxWorkflow"
-                );
-                console.log("Condition click fluxo aprova");
-                return titleResumo != null;
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "JSImporter",
-            code: () => {
-             alert("click botão aprova denovo")
-            }
-          },
-          {
-            type: "JSImporter",
-            code: () => {
-              var criarTitle = document.getElementById(
-                "propostaLivre_propostaLivreResumoFlowPanel"
-              );
-              setTimeout(() => {
-                criarTitle.click();
-                console.log("cliquei no botão Aprova");
-              }, 1000);
-            }
-          },
-
-          /*Formata Dialog Fluxo da Precificação*/
-
-          {
-            
-            type: "JSImporter",
-            code: () => {
-              setTimeout(() => {
-               let dialogGlass =  document.querySelector("body > div.dialogGlass");
-               if(dialogGlass != null && dialogGlass ){
-                 dialogGlass.removeAttribute("class");
-               }
-                  
-               let plDialogBox = document.querySelector("#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow");
-                if(plDialogBox != null && plDialogBox){
-                  plDialogBox.removeAttribute("class");
-                }
-                let tramitarPropostaLivreDialogBoxWorkflow = document.querySelector("#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow");
-                if(tramitarPropostaLivreDialogBoxWorkflow != null && tramitarPropostaLivreDialogBoxWorkflow){
-                  tramitarPropostaLivreDialogBoxWorkflow.removeAttribute("style");
-                }
-                let bodyBialog = document.querySelector("body");
-                if(bodyBialog != null && bodyBialog){
-                  bodyBialog.removeAttribute("class");
-                }
-              }, 3000);
-            }
-          },
-          {
-            type: "CSSImporter",
-            css: __webpack_require__(0)
-          },
-          {
-            type: "JSImporter",
-            code: () => {
-             alert("Formatei dialog fluxo")
-            }
-          },
-        ]
-      },
-
       /*_________________________________________________________________*/
 
       {
@@ -582,7 +506,7 @@ module.exports = [
               ).singleNodeValue;
               setTimeout(() => {
                 ajusteLiberacaoPL.removeAttribute("style");
-              }, 500);
+              }, 1000);
             }
           },
           {
@@ -597,7 +521,7 @@ module.exports = [
               ).singleNodeValue;
               setTimeout(() => {
                 ajusteLiberacaoPL.removeAttribute("style");
-              }, 1000);
+              }, 2000);
             }
           },
           {
@@ -672,7 +596,7 @@ module.exports = [
                     );
                     btnAprovarProp.click();
                     console.log("cliquei no botão sozinho");
-                  }, 3000);
+                  }, 2000);
                 });
               }
             }
@@ -715,7 +639,7 @@ module.exports = [
                     );
                     btnAprovarPropost.click();
                     console.log("cliquei no botão sozinho");
-                  }, 2000);
+                  }, 4000);
                 });
               }
             }
