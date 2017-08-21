@@ -694,35 +694,6 @@ module.exports = [
           }
         ]
       },
-      /*teste*/
-      {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var tramitarPropostaLivreBt = document.querySelector(
-                  "#propostaLivre_propostaLivreGridPanel > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1)"
-                );
-                  return tramitarPropostaLivreBt != null;
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "JSImporter",
-            code: () => {
-          var x = document.querySelector("#precificacao_views > tbody");
-           setTimeout(() => {
-             if(x != null && x){
-               x.remove(x);
-              }
-             
-             }, 2000);
-            }
-          }
-        ]
-      }
     ]
   }
 ];
