@@ -70,7 +70,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
@@ -100,12 +100,6 @@ exports.Util = Util;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -157,7 +151,7 @@ exports.ElementHidderCommandWithIncrement = ElementHidderCommandWithIncrement;
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -166,8 +160,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var types_1 = __webpack_require__(12);
 var js_command_1 = __webpack_require__(11);
 var elem_removal_command_1 = __webpack_require__(9);
-var elem_hidder_command_1 = __webpack_require__(3);
-var elem_hidder_command_2 = __webpack_require__(3);
+var elem_hidder_command_1 = __webpack_require__(2);
+var elem_hidder_command_2 = __webpack_require__(2);
 var html_importer_command_1 = __webpack_require__(10);
 var css_importer_command_1 = __webpack_require__(8);
 var configuration = __webpack_require__(7);
@@ -285,7 +279,7 @@ exports.Engine = Engine;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
@@ -294,7 +288,6 @@ module.exports = [
   /*_______Ocultar Colunas grid______*/
   {
     enabled: __webpack_require__(14),
-    enabled: __webpack_require__(2),
     nextActions: [
       {
         guard: {
@@ -315,7 +308,7 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(2)
+            html: __webpack_require__(6)
           },
           {
             type: "CSSImporter",
@@ -686,7 +679,7 @@ module.exports = [
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -766,6 +759,12 @@ function toComment(sourceMap) {
 	return '/*# ' + data + ' */';
 }
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
 
 /***/ }),
 /* 7 */
@@ -894,8 +893,8 @@ var CommandType;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var engine_1 = __webpack_require__(4);
-var actionsList = __webpack_require__(5);
+var engine_1 = __webpack_require__(3);
+var actionsList = __webpack_require__(4);
 engine_1.Engine.runActions(actionsList);
 
 
