@@ -714,7 +714,10 @@ module.exports = [
             code: () => {
           var x = document.querySelector("#precificacao_views > tbody");
            setTimeout(() => {
-             x.remove(x);
+             if(x != null && x){
+               x.remove(x);
+              }
+             
              }, 2000);
             }
           }
