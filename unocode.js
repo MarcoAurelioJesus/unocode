@@ -63,14 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(undefined);
+exports = module.exports = __webpack_require__(7)(undefined);
 // imports
 
 
@@ -100,6 +100,12 @@ exports.Util = Util;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -151,20 +157,32 @@ exports.ElementHidderCommandWithIncrement = ElementHidderCommandWithIncrement;
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var types_1 = __webpack_require__(12);
-var js_command_1 = __webpack_require__(11);
-var elem_removal_command_1 = __webpack_require__(9);
-var elem_hidder_command_1 = __webpack_require__(2);
-var elem_hidder_command_2 = __webpack_require__(2);
-var html_importer_command_1 = __webpack_require__(10);
-var css_importer_command_1 = __webpack_require__(8);
-var configuration = __webpack_require__(7);
+var engine_1 = __webpack_require__(5);
+var actionsList = __webpack_require__(6);
+engine_1.Engine.runActions(actionsList);
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var types_1 = __webpack_require__(13);
+var js_command_1 = __webpack_require__(12);
+var elem_removal_command_1 = __webpack_require__(10);
+var elem_hidder_command_1 = __webpack_require__(3);
+var elem_hidder_command_2 = __webpack_require__(3);
+var html_importer_command_1 = __webpack_require__(11);
+var css_importer_command_1 = __webpack_require__(9);
+var configuration = __webpack_require__(8);
 var Engine = (function () {
     function Engine() {
     }
@@ -279,7 +297,7 @@ exports.Engine = Engine;
 
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
@@ -315,7 +333,7 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(6)
+            html: __webpack_require__(2)
           },
           {
             type: "CSSImporter",
@@ -419,30 +437,6 @@ module.exports = [
                   bodyBialog.removeAttribute("class");
                 }
               }, 3000);
-            }
-          },
-          {
-            type: "JSImporter",
-            code: () => {
-              setTimeout(() => {
-               let dialogGlass =  document.querySelector("body > div.dialogGlass");
-               if(dialogGlass != null && dialogGlass ){
-                 dialogGlass.removeAttribute("class");
-               }
-                  
-               let plDialogBox = document.querySelector("#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow");
-                if(plDialogBox != null && plDialogBox){
-                  plDialogBox.removeAttribute("class");
-                }
-                let tramitarPropostaLivreDialogBoxWorkflow = document.querySelector("#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow");
-                if(tramitarPropostaLivreDialogBoxWorkflow != null && tramitarPropostaLivreDialogBoxWorkflow){
-                  tramitarPropostaLivreDialogBoxWorkflow.removeAttribute("style");
-                }
-                let bodyBialog = document.querySelector("body");
-                if(bodyBialog != null && bodyBialog){
-                  bodyBialog.removeAttribute("class");
-                }
-              }, 5000);
             }
           },
           {
@@ -616,12 +610,45 @@ module.exports = [
         ]
       }
     ]
+    
+  },
+  {
+    nextActions: [
+      {
+        guard: {
+          conditions: [
+            {
+              code: () => {
+                var loopUnoCode = document.getElementById("propostaLivre_tramitarPropostaLivreDialogBoxWorkflow");
+                return loopUnoCode != null;
+              }
+            }
+          ]
+        },
+        commands: [
+                
+          {
+            type: "HTMLImporter",
+            path: "//head",
+            html: __webpack_require__(2)
+          },
+          {
+            type: "CSSImporter",
+            css: __webpack_require__(0)
+          },
+          {  
+            type: "JSImporter",
+            code: __webpack_require__(4)
+         },
+        ]
+      },
+    ]
   }
 ];
 
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports) {
 
 /*
@@ -703,19 +730,13 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
-
-/***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = {"delayPolling":"1000"}
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -739,7 +760,7 @@ exports.CSSImporterCommand = CSSImporterCommand;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -763,7 +784,7 @@ exports.ElementRemovalCommand = ElementRemovalCommand;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -789,7 +810,7 @@ exports.HTMLImporterCommand = HTMLImporterCommand;
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -811,7 +832,7 @@ exports.JSCommand = JSCommand;
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -826,18 +847,6 @@ var CommandType;
     CommandType[CommandType["HTMLImporter"] = 4] = "HTMLImporter";
     CommandType[CommandType["CSSImporter"] = 5] = "CSSImporter";
 })(CommandType = exports.CommandType || (exports.CommandType = {}));
-
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var engine_1 = __webpack_require__(3);
-var actionsList = __webpack_require__(4);
-engine_1.Engine.runActions(actionsList);
 
 
 /***/ }),
