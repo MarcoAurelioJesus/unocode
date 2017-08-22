@@ -330,7 +330,7 @@ module.exports = [
               var btnTopo = document.querySelector("#precificacao_panel > tbody > tr:nth-child(1)");
                setTimeout(() => {
               btnTopo.style.display = 'none';
-                }, 3000);
+                }, 2000);
             }
           },     
           /////////////////////
@@ -379,7 +379,7 @@ module.exports = [
               setTimeout(() => {
                 btnAprovarProposta.click();
                 console.log("cliquei no botão Aprova");
-              }, 3000);
+              }, 1000);
             }
           },
           {
@@ -391,7 +391,7 @@ module.exports = [
               setTimeout(() => {
                 btnAprovarProposta.click();
                 console.log("cliquei no botão Aprova");
-              }, 5000);
+              }, 1000);
             }
           }
         ]
@@ -420,7 +420,7 @@ module.exports = [
               setTimeout(() => {
                 criarTitle.click();
                 console.log("cliquei no botão Aprova");
-              }, 3000);
+              }, 1000);
             }
           },
 
@@ -447,7 +447,7 @@ module.exports = [
                 if(bodyBialog != null && bodyBialog){
                   bodyBialog.removeAttribute("class");
                 }
-              }, 3000);
+              }, 1000);
             }
           },
           {
@@ -486,7 +486,7 @@ module.exports = [
               ).singleNodeValue;
               setTimeout(() => {
                 ajusteLiberacaoPL.removeAttribute("style");
-              }, 3000);
+              }, 1000);
             }
           },
           {
@@ -501,7 +501,7 @@ module.exports = [
               ).singleNodeValue;
               setTimeout(() => {
                 ajusteLiberacaoPL.removeAttribute("style");
-              }, 3000);
+              }, 1000);
             }
           },
           {
