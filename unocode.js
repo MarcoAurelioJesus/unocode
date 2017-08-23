@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -86,6 +86,24 @@ exports.Util = Util;
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+const loaderDiv = document.createElement('div');
+
+loaderDiv.innerHTML = `
+    <img class="PRECIFICACAO-loader-img" src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif">
+    Carregando...
+`;
+
+loaderDiv.classList.add('PRECIFICACAO-loader', 'visible');
+document.body.appendChild(loaderDiv);
+
+setTimeout(() => {
+    loaderDiv.classList.remove('visible')
+}, 3000);
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -137,20 +155,20 @@ exports.ElementHidderCommandWithIncrement = ElementHidderCommandWithIncrement;
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var types_1 = __webpack_require__(12);
-var js_command_1 = __webpack_require__(11);
-var elem_removal_command_1 = __webpack_require__(9);
-var elem_hidder_command_1 = __webpack_require__(1);
-var elem_hidder_command_2 = __webpack_require__(1);
-var html_importer_command_1 = __webpack_require__(10);
-var css_importer_command_1 = __webpack_require__(8);
-var configuration = __webpack_require__(7);
+var types_1 = __webpack_require__(13);
+var js_command_1 = __webpack_require__(12);
+var elem_removal_command_1 = __webpack_require__(10);
+var elem_hidder_command_1 = __webpack_require__(2);
+var elem_hidder_command_2 = __webpack_require__(2);
+var html_importer_command_1 = __webpack_require__(11);
+var css_importer_command_1 = __webpack_require__(9);
+var configuration = __webpack_require__(8);
 var Engine = (function () {
     function Engine() {
     }
@@ -265,7 +283,7 @@ exports.Engine = Engine;
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
@@ -274,7 +292,7 @@ module.exports = [
 
                                /*_______Ocultar Colunas grid______*/
   {
-    enabled: __webpack_require__(14),
+    enabled: __webpack_require__(15),
     nextActions: [
       
        {
@@ -293,15 +311,14 @@ module.exports = [
           {
             type: "JSImporter",
             code: () => {
-              
-               var clickPropL = document.getElementById("precificacao_propostaLivreViewButton");
+              var clickPropL = document.getElementById("precificacao_propostaLivreViewButton");
               console.log(clickPropL)
               clickPropL.click();
+              
               var precificacao_panel = document.querySelector("#precificacao_panel > tbody > tr:nth-child(1)");
               setTimeout(() => {
               precificacao_panel.style.display = "none";
-                console.log("cliquei no botão Aprova");
-              }, 5000);
+              }, 3000);
             }
           },
         ]
@@ -331,15 +348,17 @@ module.exports = [
               var meta = parent.document.createElement('meta');
               meta.viewPort = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
             }
-          },*/         
+          },
+          */         
+          
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(6)
+            html: __webpack_require__(7)
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(4)
+            css: __webpack_require__(5)
           }
         ]
       },
@@ -350,8 +369,8 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var clickBtnAprov = document.querySelector(
-                  "#propostaLivre_propostaLivreGridPanel > div > div > table > tbody > tr:nth-child(2) > td:nth-child(1) > div > div"
+                var clickBtnAprov = document.getElementById(
+                  "propostaLivre_propostaLivreResumoCaptionPanel"
                 );
                 return clickBtnAprov != null;
               }
@@ -365,36 +384,18 @@ module.exports = [
               var btnAprovarProposta = document.getElementById(
                 "propostaLivre_workflowPropostaLivreButton"
               );
+              
               setTimeout(() => {
+                __webpack_require__(1);
                 btnAprovarProposta.click();
                 console.log("cliquei no botão Aprova");
-              }, 1000);
+              }, 3000);
             }
           },
         ]
       },
+
       /*_________________________________________________________________*/
-
-      {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var clickBtnAprov = document.querySelector(
-                  "#propostaLivre_propostaLivreGridPanel > div"
-                );
-                console.log("Condition click");
-                return clickBtnAprov != null;
-              }
-            }
-          ]
-        },
-        commands: [
-
-        ]
-      },
-
-      /*______*/
 
       {
         guard: {
@@ -437,6 +438,7 @@ module.exports = [
               );
               if (tramitarPropostaLivreBt != null) {
                 tramitarPropostaLivreBt.addEventListener("click", () => {
+                   __webpack_require__(1);
                   setTimeout(() => {
                     var btnAprovarProp = document.getElementById(
                       "propostaLivre_workflowPropostaLivreButton"
@@ -481,43 +483,43 @@ module.exports = [
                 tramitarPropostaLivreBtn.length > 0
               ) {
                 tramitarPropostaLivreBtn[0].addEventListener("click", () => {
+
+                  __webpack_require__(1);
                   setTimeout(() => {
                     var btnAprovarPropost = document.getElementById(
                       "propostaLivre_workflowPropostaLivreButton"
                     );
                     btnAprovarPropost.click();
                     console.log("cliquei no botão sozinho");
-                  }, 2000);
+                  }, 3000);
                 });
               }
             }
           },
-         
         ]
       },
     ]
-    
   },
   
 ];
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(undefined);
+exports = module.exports = __webpack_require__(6)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "/*__CSS PRECIFICAÇÃO PROPOSTA LIVRE__*/\r\n\r\nbody {\r\n    overflow: auto !important;\r\n    margin: 5px !important;\r\n}\r\n\r\n\r\n/*/__Formata grid busca __*/\r\n\r\npropostaLivre_gridPropostaLivrePanel {\r\n    weight: 98% !important;\r\n}\r\n\r\n.gridBuscaPre:first-child table td {\r\n    display: none;\r\n}\r\n\r\n.gridBuscaPre:first-child table td:nth-child(1) {\r\n    display: table-cell !important;\r\n}\r\n\r\n.gridBuscaPre:first-child table td:nth-child(2) {\r\n    display: table-cell !important;\r\n}\r\n\r\n.gridBuscaPre:first-child table td:nth-child(3) {\r\n    display: table-cell !important;\r\n}\r\n\r\n\r\n/*__Oculta disclosurePanel__*/\r\n\r\n#propostaLivre_disclosureLabel {\r\n    display: none !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGrid {\r\n    height: auto !important;\r\n}\r\n\r\n\r\n/*__Oculta tabBar__*/\r\n\r\n#propostaLivre_tabBar {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Oculta Aba ajustes e info.preVenda*/\r\n\r\n#propostaLivre_propostaLivreResumoPanel>tbody>tr>td:nth-child(2) {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Oculta propostaLivre_filterPropostaLivreAtividadePanel__*/\r\n\r\n#propostaLivre_PropostaLivreAtividadesFlowPanel {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Muda cor topo das grids__*/\r\n\r\n#propostaLivre_propostaLivreGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n    background: #428bca !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n    background: #428bca !important;\r\n}\r\n\r\n\r\n/*__Oculta botão Aplicar Ajustes__*/\r\n\r\n#propostaLivre_propostaLivreInnerTabContainer>tbody>tr:nth-child(2)>td {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Oculta DisclousePanelHeader__*/\r\n\r\n#propostaLivre_propostaLivreDisclousePanelHeader {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Ajusta grid propostaLivreResumo__*/\r\n\r\n#propostaLivre_propostaLivreResumoFlowPanel {\r\n    width: 100% !important;\r\n}\r\n\r\n\r\n/*__Formata grid propostaLivreResumo__*/\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table {\r\n    box-sizing: initial !important;\r\n}\r\n\r\n\r\n/*__Muda cor topo da grid Resumo__*/\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1) {\r\n    background: beige !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2) {\r\n    background: beige !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5) {\r\n    background: beige !important;\r\n}\r\n\r\n\r\n/* Formatação interna Dialog Fluxo  da Precificação*/\r\n\r\n.dialogTitle {\r\n    color: #000000 !important;\r\n    text-align: left !important;\r\n    margin: 5px !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n    background: beige !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(3)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(4)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(1) {\r\n    width: 5% !important;\r\n    height: 35px !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(3) {\r\n    display: none !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(4) {\r\n    display: none !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreResumoFlowPanel {\r\n    width: 99% !important;\r\n    margin-left: 5px !important;\r\n    padding: 5px !important;\r\n}\r\n\r\n#propostaLivre_filterPropostaLivreHTMLPanel {\r\n    display: none;\r\n}\r\n\r\n#propostaLivre_propostaLivreResumoPanel {\r\n    border: 1px solid #428bca !important;\r\n    border-top-right-radius: 10px !important;\r\n    border-top-left-radius: 10px !important;\r\n    color: #428bca !important;\r\n    font-size: 13px !important;\r\n    font-weight: normal !important;\r\n    width: 98% !important;\r\n    height: 100% !important;\r\n    font-family: Verdana !important;\r\n    margin: 5px !important;\r\n}\r\n\r\n\r\n/*____Formata Fieldset____*/\r\n\r\n#propostaLivre_propostaLivreResumoCaptionPanel {\r\n    border: none !important;\r\n}\r\n\r\n\r\n/*__________Formatação externa Dialog_________*/\r\n\r\n.dialogGlass {\r\n    display: none !important;\r\n}\r\n\r\n#body>div.dialogGlass {\r\n    position: relative !important;\r\n}\r\n\r\n.dialogCloseButton {\r\n    display: none !important;\r\n}\r\n\r\n#root_viewContainer>div {\r\n    height: auto !important;\r\n}\r\n\r\n#root_viewContainer {\r\n    height: auto !important;\r\n}\r\n\r\n#precificacao2f precificacao2e html_viewContainer>div {\r\n    height: auto !important;\r\n}\r\n\r\n#precificacao2f precificacao2e html_viewContainer {\r\n    height: auto !important;\r\n}\r\n\r\nbody>div:nth-child(6) {\r\n    height: auto !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow {\r\n    position: relative !important;\r\n    left: auto !important;\r\n    top: auto !important;\r\n    margin: 2px !important;\r\n    width: 98% !important;\r\n    transform: initial !important;\r\n    margin-top: 15px !important;\r\n}\r\n\r\n#propostaLivre_tramitacaoPropostaLivreFlexTable {\r\n    width: 100% !important;\r\n}", ""]);
+exports.push([module.i, "/*__CSS PRECIFICAÇÃO PROPOSTA LIVRE__*/\r\n\r\nbody {\r\n    overflow: auto !important;\r\n    margin: 5px !important;\r\n}\r\n\r\n\r\n/*/__Formata grid busca __*/\r\n\r\npropostaLivre_gridPropostaLivrePanel {\r\n    weight: 98% !important;\r\n}\r\n\r\n.gridBuscaPre:first-child table td {\r\n    display: none;\r\n}\r\n\r\n.gridBuscaPre:first-child table td:nth-child(1) {\r\n    display: table-cell !important;\r\n}\r\n\r\n.gridBuscaPre:first-child table td:nth-child(2) {\r\n    display: table-cell !important;\r\n}\r\n\r\n.gridBuscaPre:first-child table td:nth-child(3) {\r\n    display: table-cell !important;\r\n}\r\n\r\n\r\n/*__Oculta disclosurePanel__*/\r\n\r\n#propostaLivre_disclosureLabel {\r\n    display: none !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGrid {\r\n    height: auto !important;\r\n}\r\n\r\n\r\n/*__Oculta tabBar__*/\r\n\r\n#propostaLivre_tabBar {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Oculta Aba ajustes e info.preVenda*/\r\n\r\n#propostaLivre_propostaLivreResumoPanel>tbody>tr>td:nth-child(2) {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Oculta propostaLivre_filterPropostaLivreAtividadePanel__*/\r\n\r\n#propostaLivre_PropostaLivreAtividadesFlowPanel {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Muda cor topo das grids__*/\r\n\r\n#propostaLivre_propostaLivreGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n    background: #428bca !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n    background: #428bca !important;\r\n}\r\n\r\n\r\n/*__Oculta botão Aplicar Ajustes__*/\r\n\r\n#propostaLivre_propostaLivreInnerTabContainer>tbody>tr:nth-child(2)>td {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Oculta DisclousePanelHeader__*/\r\n\r\n#propostaLivre_propostaLivreDisclousePanelHeader {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*__Ajusta grid propostaLivreResumo__*/\r\n\r\n#propostaLivre_propostaLivreResumoFlowPanel {\r\n    width: 100% !important;\r\n}\r\n\r\n\r\n/*__Formata grid propostaLivreResumo__*/\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table {\r\n    box-sizing: initial !important;\r\n}\r\n\r\n\r\n/*__Muda cor topo da grid Resumo__*/\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333333 !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1) {\r\n    background: beige !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2) {\r\n    background: beige !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5) {\r\n    background: beige !important;\r\n}\r\n\r\n\r\n/* Formatação interna Dialog Fluxo  da Precificação*/\r\n\r\n.dialogTitle {\r\n    color: #000 !important;\r\n    text-align: left !important;\r\n    margin: 5px !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n    background: beige !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333 !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333 !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(3)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333 !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(4)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n    color: #333 !important;\r\n}\r\n\r\n#propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(1) {\r\n    width: 5% !important;\r\n    height: 35px !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(3) {\r\n    display: none !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(4) {\r\n    display: none !important;\r\n}\r\n\r\n#propostaLivre_propostaLivreResumoFlowPanel {\r\n    width: 99% !important;\r\n    margin-left: 5px !important;\r\n    padding: 5px !important;\r\n}\r\n\r\n#propostaLivre_filterPropostaLivreHTMLPanel {\r\n    display: none;\r\n}\r\n\r\n#propostaLivre_propostaLivreResumoPanel {\r\n    border: 1px solid #428bca !important;\r\n    border-top-right-radius: 10px !important;\r\n    border-top-left-radius: 10px !important;\r\n    color: #428bca !important;\r\n    font-size: 13px !important;\r\n    font-weight: normal !important;\r\n    width: 98% !important;\r\n    height: 100% !important;\r\n    font-family: Verdana !important;\r\n    margin: 5px !important;\r\n}\r\n\r\n\r\n/*____Formata Fieldset____*/\r\n\r\n#propostaLivre_propostaLivreResumoCaptionPanel {\r\n    border: none !important;\r\n}\r\n\r\n\r\n/*__________Formatação externa Dialog_________*/\r\n\r\n.dialogGlass {\r\n    display: none !important;\r\n}\r\n\r\n#body>div.dialogGlass {\r\n    position: relative !important;\r\n}\r\n\r\n.dialogCloseButton {\r\n    display: none !important;\r\n}\r\n\r\n#root_viewContainer>div {\r\n    height: auto !important;\r\n}\r\n\r\n#root_viewContainer {\r\n    height: auto !important;\r\n}\r\n\r\n#precificacao2f precificacao2e html_viewContainer>div {\r\n    height: auto !important;\r\n}\r\n\r\n#precificacao2f precificacao2e html_viewContainer {\r\n    height: auto !important;\r\n}\r\n\r\nbody>div:nth-child(6) {\r\n    height: auto !important;\r\n}\r\n\r\n#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow {\r\n    position: relative !important;\r\n    left: auto !important;\r\n    top: auto !important;\r\n    margin: 2px !important;\r\n    width: 98% !important;\r\n    transform: initial !important;\r\n    margin-top: 15px !important;\r\n}\r\n\r\n#propostaLivre_tramitacaoPropostaLivreFlexTable {\r\n    width: 100% !important;\r\n}\r\n\r\n\r\n/*________Load________*/\r\n\r\n.PRECIFICACAO-loader {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    z-index: 10000;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n    font-size: 18px;\r\n    font-family: sans-serif;\r\n    background: #fff;\r\n    opacity: 0;\r\n    pointer-events: none;\r\n    transition: opacity 0.3s linear;\r\n}\r\n\r\n.PRECIFICACAO-loader.visible {\r\n    opacity: 1;\r\n    pointer-events: all;\r\n}\r\n\r\n.PRECIFICACAO-loader-img {\r\n    width: 40px;\r\n    height: 40px;\r\n    margin-bottom: 15px;\r\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 /*
@@ -599,19 +601,19 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = {"delayPolling":"1000"}
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -635,7 +637,7 @@ exports.CSSImporterCommand = CSSImporterCommand;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -659,7 +661,7 @@ exports.ElementRemovalCommand = ElementRemovalCommand;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -685,7 +687,7 @@ exports.HTMLImporterCommand = HTMLImporterCommand;
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -707,7 +709,7 @@ exports.JSCommand = JSCommand;
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -725,19 +727,19 @@ var CommandType;
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var engine_1 = __webpack_require__(2);
-var actionsList = __webpack_require__(3);
+var engine_1 = __webpack_require__(3);
+var actionsList = __webpack_require__(4);
 engine_1.Engine.runActions(actionsList);
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = () => {
