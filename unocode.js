@@ -291,17 +291,7 @@ module.exports = [
           ]
         },
         commands: [
-          ///OCULTAR BOTÕES TOPO//
-          {
-            type: "JSImporter",
-            code: () => {
-              var btnTopo = document.querySelector("#precificacao_panel > tbody > tr:nth-child(1)");
-               setTimeout(() => {
-              btnTopo.style.display = 'none';
-                }, 1000);
-            }
-          },     
-          /////////////////////
+         
           /*{
             type: "JSImporter",
             code: () => {
