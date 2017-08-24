@@ -306,7 +306,6 @@ module.exports = [
         ]
       },
 
-      /*______________________________________________________________________________________*/
       {
         guard: {
           conditions: [
@@ -323,6 +322,15 @@ module.exports = [
           ]
         },
         commands: [
+           {
+            type: "HTMLImporter",
+            path: "//head",
+            html: __webpack_require__(6)
+          },
+          {
+            type: "CSSImporter",
+            css: __webpack_require__(4)
+          }
          
           /*{
             type: "JSImporter",
@@ -332,154 +340,8 @@ module.exports = [
             }
           },
           */         
-          
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(6)
-          },
-          {
-            type: "CSSImporter",
-            css: __webpack_require__(4)
-          }
         ]
       },
-      /*______Clicar no Botão Fluxo PL______*/
-
-     /* {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var clickBtnAprov = document.getElementById(
-                  "propostaLivre_propostaLivreResumoCaptionPanel"
-                );
-                return clickBtnAprov != null;
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "JSImporter",
-            code: () => {
-              var btnAprovarProposta = document.getElementById(
-                "propostaLivre_workflowPropostaLivreButton"
-              );
-              
-              setTimeout(() => {
-                //require('./files/onloader.js');
-                btnAprovarProposta.click();
-                console.log("cliquei no botão Aprova");
-              }, 3000);
-            }
-          },
-        ]
-      },*/
-
-      /*_________________________________________________________________*/
-
-     /* {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var removBtnApv = document.querySelector(
-                  "#propostaLivre_tramitarPropostaLivreDialogBoxWorkflow > div > div"
-                );
-                return removBtnApv != null;
-              }
-            }
-          ]
-        },
-        commands: [
-        ]
-      },*/
-
-      /*Click no botão fluxo de aprovação*/
-
-      /*{
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var tramitarPropostaLivreBtn1 = document.querySelector(
-                  "#propostaLivre_propostaLivreGridPanel > div"
-                );
-                return tramitarPropostaLivreBtn1 != null;
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "JSImporter",
-            code: () => {
-              var tramitarPropostaLivreBt = document.getElementById(
-                "propostaLivre_tramitarPropostaLivreButton"
-              );
-              if (tramitarPropostaLivreBt != null) {
-                tramitarPropostaLivreBt.addEventListener("click", () => {
-                   //require('./files/onloader.js');
-                  setTimeout(() => {
-                    var btnAprovarProp = document.getElementById(
-                      "propostaLivre_workflowPropostaLivreButton"
-                    );
-                    btnAprovarProp.click();
-                    console.log("cliquei no botão sozinho");
-                  }, 3000);
-                });
-              }
-            }
-          },
-          
-        ]
-      },*/
-
-      /*__Aciona o Dialog fluxo de aprovação ao clicar e OK do Dialog Atenção __*/
-
-      /*{
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var tramitarPropostaLivreBt = document.getElementsByClassName(
-                  "crux-MessageDialog"
-                );
-                if (tramitarPropostaLivreBt.length > 0) {
-                  return tramitarPropostaLivreBt != null;
-                }
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "JSImporter",
-            code: () => {
-              var tramitarPropostaLivreBtn = document.getElementsByClassName(
-                "crux-Button button okButton"
-              );
-              if (
-                tramitarPropostaLivreBtn != null &&
-                tramitarPropostaLivreBtn.length > 0
-              ) {
-                tramitarPropostaLivreBtn[0].addEventListener("click", () => {
-
-                 // require('./files/onloader.js');
-                  setTimeout(() => {
-                    var btnAprovarPropost = document.getElementById(
-                      "propostaLivre_workflowPropostaLivreButton"
-                    );
-                    btnAprovarPropost.click();
-                    console.log("cliquei no botão sozinho");
-                  }, 3000);
-                });
-              }
-            }
-          },
-        ]
-      },*/
     ]
   },
   
