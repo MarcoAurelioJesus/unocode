@@ -343,7 +343,7 @@ module.exports = [
               var btnFluxo =document.getElementById("propostaLivre_workflowPropostaLivreButton");
                setTimeout(() => {
              btnFluxo.click();
-             }, 10000);
+             }, 1000);
             }
           },     
         ]
