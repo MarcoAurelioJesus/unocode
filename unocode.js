@@ -367,7 +367,7 @@ module.exports = [
 
               var removeZoonIos = document.createElement("meta");
               removeZoonIos.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">`;
-              document.querySelector("head").prepend(removeZoonIos);
+              document.querySelector("head").append(removeZoonIos);
           }
           }
         ]
