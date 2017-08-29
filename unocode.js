@@ -366,8 +366,8 @@ module.exports = [
               document.querySelector("body").prepend(logoTopo);
 
               var removeZoonIos = document.createElement("meta");
-              removeZoonIos.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no !important">`;
-              document.querySelector(head).prepend(removeZoonIos);
+              removeZoonIos.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">`;
+              document.querySelector("head").prepend(removeZoonIos);
           }
           }
         ]
