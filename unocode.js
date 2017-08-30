@@ -280,7 +280,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.getElementById("precificacao");
+                var topo = document.getElementById("m_cabecalho");
 
                 console.log("condition 1 Ocultar topo");
                 return topo != null;
