@@ -326,7 +326,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.getElementById("style-1-cropbar-clipper");
+                var topo = document.getElementById("cabecalho_ssg");
 
                 console.log("Inserir topo");
                 return topo != null;
