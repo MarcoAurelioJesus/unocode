@@ -300,7 +300,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.getElementById("m_cabecalho");
+                var topo = document.getElementById("cabecalho_ssg");
 
                 console.log("condition 1 Ocultar topo");
                 return topo != null;
@@ -326,7 +326,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.querySelector("body > table:nth-child(26)");
+                var topo = document.getElementsByClassName("tdLinha");
 
                 console.log("Inserir topo");
                 return topo != null;
