@@ -301,7 +301,7 @@ module.exports = [
         ]
       },
       /*_______Inserir Logo Topo______*/
-      {
+      /*{
         guard: {
           conditions: [
             {
@@ -342,7 +342,7 @@ module.exports = [
           }
           }
         ]
-      },
+      },*/
       /*_______Ocultar Colunas grid______*/
       {
         guard: {
