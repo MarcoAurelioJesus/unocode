@@ -326,7 +326,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.getElementsByClassName("tdLinha");
+                var topo = document.getElementById("style-1-cropbar-clipper");
 
                 console.log("Inserir topo");
                 return topo != null;
