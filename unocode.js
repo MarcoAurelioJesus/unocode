@@ -88,26 +88,6 @@ exports.Util = Util;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "               /*__CSS PRECIFICAÇÃO PROPOSTA LIVRE__*/\r\n               \r\n               body {\r\n                   overflow: hidden !important;\r\n                   margin-top: 10px !important;\r\n                   margin-right: 5px !important;\r\n                   margin-bottom: 5px !important;\r\n                   margin-left: 5px !important;\r\n                   height: 200% !important;\r\n               }\r\n               \r\n               body>div:nth-child(6) {\r\n                   height: auto !important;\r\n               }\r\n               /*/__Formata grid busca __*/\r\n               \r\n               #propostaLivre_propostaLivreDisclousePanel>tbody>tr:nth-child(2)>td>div {\r\n                   overflow: hidden !important;\r\n               }\r\n               \r\n               .propostaLivre_gridPropostaLivrePanel {\r\n                   height: 98% !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreDisclousePanel>tbody>tr:nth-child(2)>td>div {}\r\n               \r\n               .gridBuscaPre:first-child table td {\r\n                   display: none;\r\n               }\r\n               \r\n               .gridBuscaPre:first-child table td:nth-child(1) {\r\n                   display: table-cell !important;\r\n               }\r\n               \r\n               .gridBuscaPre:first-child table td:nth-child(2) {\r\n                   display: table-cell !important;\r\n               }\r\n               \r\n               .gridBuscaPre:first-child table td:nth-child(3) {\r\n                   display: table-cell !important;\r\n               }\r\n               /*__Oculta disclosurePanel__*/\r\n               \r\n               #propostaLivre_disclosureLabel {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGrid {\r\n                   height: auto !important;\r\n                   width: 100% !important;\r\n               }\r\n               /*__Oculta tabBar__*/\r\n               \r\n               #propostaLivre_tabBar {\r\n                   display: none !important;\r\n               }\r\n               /*__Oculta Aba ajustes e info.preVenda*/\r\n               \r\n               #propostaLivre_propostaLivreResumoPanel>tbody>tr>td:nth-child(2) {\r\n                   display: none !important;\r\n               }\r\n               /*__Oculta propostaLivre_filterPropostaLivreAtividadePanel__*/\r\n               \r\n               #propostaLivre_PropostaLivreAtividadesFlowPanel {\r\n                   display: none !important;\r\n               }\r\n               /*__Muda cor topo das grids__*/\r\n               \r\n               #propostaLivre_propostaLivreGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n                   background: #428bca !important;\r\n               }\r\n               /*__Oculta botão Aplicar Ajustes__*/\r\n               \r\n               #propostaLivre_propostaLivreInnerTabContainer>tbody>tr:nth-child(2)>td {\r\n                   display: none !important;\r\n               }\r\n               /*__Oculta DisclousePanelHeader__*/\r\n               \r\n               #propostaLivre_propostaLivreDisclousePanelHeader {\r\n                   display: none !important;\r\n               }\r\n               /*__Formata grid propostaLivreResumo__*/\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table {\r\n                   box-sizing: initial !important;\r\n               }\r\n               /*__Muda cor topo da grid Resumo__*/\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333333 !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333333 !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333333 !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1) {\r\n                   background: beige !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2) {\r\n                   background: beige !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5) {\r\n                   background: beige !important;\r\n               }\r\n               /*____Formata Fieldset____*/\r\n               \r\n               #propostaLivre_propostaLivreResumoCaptionPanel {\r\n                   border: none !important;\r\n                   margin-top: 35px !important;\r\n                   width: auto !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoCaptionPanel>legend {\r\n                   position: absolute !important;\r\n                   top: 0 !important;\r\n                   left: 0 !important;\r\n                   margin: 0 !important;\r\n                   width: 100% !important;\r\n                   background: #428bca !important;\r\n                   color: #fff !important;\r\n                   padding: 10px !important;\r\n                   border: none !important;\r\n                   height: 40px !important;\r\n                   font-size: 14px !important;\r\n                   font-weight: normal !important;\r\n                   font-family: Verdana !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoPanel {\r\n                   overflow: hidden !important;\r\n                   position: relative !important;\r\n               }\r\n               \r\n               .faces-NumberBox {\r\n                   color: #403d3d !important;\r\n                   font-weight: bold !important;\r\n                   opacity: 1 !important;\r\n               }\r\n               \r\n               .textBox {\r\n                   opacity: 1 !important;\r\n               }\r\n               /* Formatação interna Dialog Fluxo  da Precificação*/\r\n               \r\n               #propostaLivre_tramitarPropostaLivreDialogBoxWorkflow>div>div>div.dialogTopBar>div.dialogTitle {\r\n                   color: #FFF !important;\r\n                   text-align: left !important;\r\n                   margin: 1px !important;\r\n               }\r\n               \r\n               .dialogTopBarDragHandle {\r\n                   display: none !important;\r\n               }\r\n               \r\n               .dialogTopBar {\r\n                   background: #428bca !important;\r\n                   z-index: initial !important;\r\n                   box-shadow: initial !important;\r\n                   padding: 10px !important;\r\n                   border-radius: 9px 9px 0 0 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(2) {\r\n                   height: 90% !important;\r\n               }\r\n               \r\n               .dialogTitle {\r\n                   color: #000 !important;\r\n                   text-align: left !important;\r\n                   margin: 5px !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n                   background: beige !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(3)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(4)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(1) {\r\n                   width: 15% !important;\r\n                   height: 35px !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(3) {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(4) {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoFlowPanel {\r\n                   width: 100% !important;\r\n                   margin-left: 1px !important;\r\n                   padding-top: 5px !important;\r\n               }\r\n               \r\n               #propostaLivre_filterPropostaLivreHTMLPanel {\r\n                   display: none;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoPanel {\r\n                   border: 1px solid #428bca !important;\r\n                   border-top-right-radius: 10px !important;\r\n                   border-top-left-radius: 10px !important;\r\n                   color: #428bca !important;\r\n                   font-size: 13px !important;\r\n                   font-weight: normal !important;\r\n                   width: 98% !important;\r\n                   height: 100% !important;\r\n                   font-family: Verdana !important;\r\n                   margin: 5px !important;\r\n               }\r\n               /*__________Formatação externa Dialog_________*/\r\n               \r\n               .dialogGlass {\r\n                   display: none !important;\r\n                   left: auto !important;\r\n                   top: auto !important;\r\n                   width: auto !important;\r\n                   height: auto !important;\r\n               }\r\n               \r\n               .faces-popup {\r\n                   box-shadow: none !important;\r\n               }\r\n               \r\n               .popupContent {\r\n                   border: 1px solid #428bca !important;\r\n                   border-top-left-radius: 10px !important;\r\n                   border-top-right-radius: 10px !important;\r\n               }\r\n               \r\n               #body>div.dialogGlass {\r\n                   position: relative !important;\r\n               }\r\n               \r\n               .dialogCloseButton {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #root_viewContainer>div {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #root_viewContainer {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #precificacao2f precificacao2e html_viewContainer>div {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #precificacao2f precificacao2e html_viewContainer {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #body>div:nth-child(6) {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreDialogBoxWorkflow {\r\n                   position: relative !important;\r\n                   left: auto !important;\r\n                   top: auto !important;\r\n                   margin: 2px !important;\r\n                   width: 98% !important;\r\n                   transform: initial !important;\r\n                   margin-bottom: 30px !important;\r\n                   margin-top: 30px !important;\r\n                   margin-left: 5px !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid {\r\n                   border: 1px solid #c0c0c0 !important;\r\n                   border-color: #c0c0c0 !important;\r\n                   margin-bottom: 10px !important;\r\n                   overflow: hidden !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreObservacaoTextArea {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable {\r\n                   width: 100% !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(3) {\r\n                   width: 5% !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreDialogBoxWorkflow .crux-Cell .gwt-Label {\r\n                   word-break: break-all !important;\r\n                   white-space: normal !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(3)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   word-break: normal !important;\r\n                   white-space: nowrap !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr:nth-child(2)>td:nth-child(1)>div>div {\r\n                   word-break: inherit !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr:nth-child(2)>td:nth-child(2)>div>div {\r\n                   word-break: inherit !important;\r\n               }", ""]);
-
-// exports
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -157,7 +137,7 @@ exports.ElementHidderCommandWithIncrement = ElementHidderCommandWithIncrement;
 
 
 /***/ }),
-/* 4 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -166,8 +146,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var types_1 = __webpack_require__(12);
 var js_command_1 = __webpack_require__(11);
 var elem_removal_command_1 = __webpack_require__(9);
-var elem_hidder_command_1 = __webpack_require__(3);
-var elem_hidder_command_2 = __webpack_require__(3);
+var elem_hidder_command_1 = __webpack_require__(1);
+var elem_hidder_command_2 = __webpack_require__(1);
 var html_importer_command_1 = __webpack_require__(10);
 var css_importer_command_1 = __webpack_require__(8);
 var configuration = __webpack_require__(7);
@@ -285,7 +265,7 @@ exports.Engine = Engine;
 
 
 /***/ }),
-/* 5 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
@@ -295,74 +275,7 @@ module.exports = [
   {
     enabled: __webpack_require__(14),
     nextActions: [
-      {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var topo = document.getElementById("m_cabecalho");
-
-                console.log("condition 1 Ocultar topo");
-                return topo != null;
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(2)
-          },
-          {
-            type: "CSSImporter",
-            css: __webpack_require__(1)
-          }
-        ]
-      },
-      /*_______Inserir Logo Topo______*/
-      {
-        guard: {
-          conditions: [
-            {
-              code: () => {
-                var topo = document.querySelector("body > table:nth-child(26)");
-
-                console.log("Inserir topo");
-                return topo != null;
-              }
-            }
-          ]
-        },
-        commands: [
-    
-          {
-            type: "JSImporter",
-            code: () => {
-              var logoTopo = document.createElement("div");
-              logoTopo.innerHTML = `<div class="container" style="width: 100%; padding: 0px; overflow: hidden">
-                            <div class="row">
-                                <div class="col-sm-12 col-xs-12 visible-xs visible-sm text-center">
-                                    <a style="text-decoration: none" href="/index.html">
-                                        <img src="/layout/images/cabecalho_mobile_size_ssg.jpg" name="cabecalho_ssg" id="cabecalho_ssg" longdesc="http://www.sysmap.com.br">
-                                    </a>
-                                    <a style="text-decoration: none" href="/processos/pas/index.htm" target="_blank">
-                                        <img src="/layout/images/pas.png" name="cabecalho_psds" id="cabecalho_psds" width="130" height="74" longdesc="http://www.sysmap.com.br">
-                                    </a>
-                                    <br>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>`;
-              document.querySelector("body").prepend(logoTopo);
-
-              var removeZoonIos = document.createElement("meta");
-              removeZoonIos.innerHTML = `<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">`;
-              document.querySelector("head").append(removeZoonIos);
-          }
-          }
-        ]
-      },
+      
       /*_______Ocultar Colunas grid______*/
       {
         guard: {
@@ -380,11 +293,11 @@ module.exports = [
              {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(2)
+            html: __webpack_require__(6)
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(1)
+            css: __webpack_require__(4)
           }
           ]
         },
@@ -423,7 +336,21 @@ module.exports = [
 
 
 /***/ }),
-/* 6 */
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(5)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "               /*__CSS PRECIFICAÇÃO PROPOSTA LIVRE__*/\r\n               \r\n               body {\r\n                   overflow: hidden !important;\r\n                   margin-top: 10px !important;\r\n                   margin-right: 5px !important;\r\n                   margin-bottom: 5px !important;\r\n                   margin-left: 5px !important;\r\n                   height: 200% !important;\r\n               }\r\n               \r\n               body>div:nth-child(6) {\r\n                   height: auto !important;\r\n               }\r\n               /*/__Formata grid busca __*/\r\n               \r\n               #propostaLivre_propostaLivreDisclousePanel>tbody>tr:nth-child(2)>td>div {\r\n                   overflow: hidden !important;\r\n               }\r\n               \r\n               .propostaLivre_gridPropostaLivrePanel {\r\n                   height: 98% !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreDisclousePanel>tbody>tr:nth-child(2)>td>div {}\r\n               \r\n               .gridBuscaPre:first-child table td {\r\n                   display: none;\r\n               }\r\n               \r\n               .gridBuscaPre:first-child table td:nth-child(1) {\r\n                   display: table-cell !important;\r\n               }\r\n               \r\n               .gridBuscaPre:first-child table td:nth-child(2) {\r\n                   display: table-cell !important;\r\n               }\r\n               \r\n               .gridBuscaPre:first-child table td:nth-child(3) {\r\n                   display: table-cell !important;\r\n               }\r\n               /*__Oculta disclosurePanel__*/\r\n               \r\n               #propostaLivre_disclosureLabel {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGrid {\r\n                   height: auto !important;\r\n                   width: 100% !important;\r\n               }\r\n               /*__Oculta tabBar__*/\r\n               \r\n               #propostaLivre_tabBar {\r\n                   display: none !important;\r\n               }\r\n               /*__Oculta Aba ajustes e info.preVenda*/\r\n               \r\n               #propostaLivre_propostaLivreResumoPanel>tbody>tr>td:nth-child(2) {\r\n                   display: none !important;\r\n               }\r\n               /*__Oculta propostaLivre_filterPropostaLivreAtividadePanel__*/\r\n               \r\n               #propostaLivre_PropostaLivreAtividadesFlowPanel {\r\n                   display: none !important;\r\n               }\r\n               /*__Muda cor topo das grids__*/\r\n               \r\n               #propostaLivre_propostaLivreGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n                   background: #428bca !important;\r\n               }\r\n               /*__Oculta botão Aplicar Ajustes__*/\r\n               \r\n               #propostaLivre_propostaLivreInnerTabContainer>tbody>tr:nth-child(2)>td {\r\n                   display: none !important;\r\n               }\r\n               /*__Oculta DisclousePanelHeader__*/\r\n               \r\n               #propostaLivre_propostaLivreDisclousePanelHeader {\r\n                   display: none !important;\r\n               }\r\n               /*__Formata grid propostaLivreResumo__*/\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table {\r\n                   box-sizing: initial !important;\r\n               }\r\n               /*__Muda cor topo da grid Resumo__*/\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333333 !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333333 !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333333 !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1) {\r\n                   background: beige !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2) {\r\n                   background: beige !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(5) {\r\n                   background: beige !important;\r\n               }\r\n               /*____Formata Fieldset____*/\r\n               \r\n               #propostaLivre_propostaLivreResumoCaptionPanel {\r\n                   border: none !important;\r\n                   margin-top: 35px !important;\r\n                   width: auto !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoCaptionPanel>legend {\r\n                   position: absolute !important;\r\n                   top: 0 !important;\r\n                   left: 0 !important;\r\n                   margin: 0 !important;\r\n                   width: 100% !important;\r\n                   background: #428bca !important;\r\n                   color: #fff !important;\r\n                   padding: 10px !important;\r\n                   border: none !important;\r\n                   height: 40px !important;\r\n                   font-size: 14px !important;\r\n                   font-weight: normal !important;\r\n                   font-family: Verdana !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoPanel {\r\n                   overflow: hidden !important;\r\n                   position: relative !important;\r\n               }\r\n               \r\n               .faces-NumberBox {\r\n                   color: #403d3d !important;\r\n                   font-weight: bold !important;\r\n                   opacity: 1 !important;\r\n               }\r\n               \r\n               .textBox {\r\n                   opacity: 1 !important;\r\n               }\r\n               /* Formatação interna Dialog Fluxo  da Precificação*/\r\n               \r\n               #propostaLivre_tramitarPropostaLivreDialogBoxWorkflow>div>div>div.dialogTopBar>div.dialogTitle {\r\n                   color: #FFF !important;\r\n                   text-align: left !important;\r\n                   margin: 1px !important;\r\n               }\r\n               \r\n               .dialogTopBarDragHandle {\r\n                   display: none !important;\r\n               }\r\n               \r\n               .dialogTopBar {\r\n                   background: #428bca !important;\r\n                   z-index: initial !important;\r\n                   box-shadow: initial !important;\r\n                   padding: 10px !important;\r\n                   border-radius: 9px 9px 0 0 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(2) {\r\n                   height: 90% !important;\r\n               }\r\n               \r\n               .dialogTitle {\r\n                   color: #000 !important;\r\n                   text-align: left !important;\r\n                   margin: 5px !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row {\r\n                   background: beige !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(1)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(2)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(3)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(4)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   color: #333 !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(1) {\r\n                   width: 15% !important;\r\n                   height: 35px !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(3) {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreGridPanel>div>div>table td:nth-child(4) {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoFlowPanel {\r\n                   width: 100% !important;\r\n                   margin-left: 1px !important;\r\n                   padding-top: 5px !important;\r\n               }\r\n               \r\n               #propostaLivre_filterPropostaLivreHTMLPanel {\r\n                   display: none;\r\n               }\r\n               \r\n               #propostaLivre_propostaLivreResumoPanel {\r\n                   border: 1px solid #428bca !important;\r\n                   border-top-right-radius: 10px !important;\r\n                   border-top-left-radius: 10px !important;\r\n                   color: #428bca !important;\r\n                   font-size: 13px !important;\r\n                   font-weight: normal !important;\r\n                   width: 98% !important;\r\n                   height: 100% !important;\r\n                   font-family: Verdana !important;\r\n                   margin: 5px !important;\r\n               }\r\n               /*__________Formatação externa Dialog_________*/\r\n               \r\n               .dialogGlass {\r\n                   display: none !important;\r\n                   left: auto !important;\r\n                   top: auto !important;\r\n                   width: auto !important;\r\n                   height: auto !important;\r\n               }\r\n               \r\n               .faces-popup {\r\n                   box-shadow: none !important;\r\n               }\r\n               \r\n               .popupContent {\r\n                   border: 1px solid #428bca !important;\r\n                   border-top-left-radius: 10px !important;\r\n                   border-top-right-radius: 10px !important;\r\n               }\r\n               \r\n               #body>div.dialogGlass {\r\n                   position: relative !important;\r\n               }\r\n               \r\n               .dialogCloseButton {\r\n                   display: none !important;\r\n               }\r\n               \r\n               #root_viewContainer>div {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #root_viewContainer {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #precificacao2f precificacao2e html_viewContainer>div {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #precificacao2f precificacao2e html_viewContainer {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #body>div:nth-child(6) {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreDialogBoxWorkflow {\r\n                   position: relative !important;\r\n                   left: auto !important;\r\n                   top: auto !important;\r\n                   margin: 2px !important;\r\n                   width: 98% !important;\r\n                   transform: initial !important;\r\n                   margin-bottom: 30px !important;\r\n                   margin-top: 30px !important;\r\n                   margin-left: 5px !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid {\r\n                   border: 1px solid #c0c0c0 !important;\r\n                   border-color: #c0c0c0 !important;\r\n                   margin-bottom: 10px !important;\r\n                   overflow: hidden !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreObservacaoTextArea {\r\n                   height: auto !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable {\r\n                   width: 100% !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitacaoPropostaLivreFlexTable>tbody>tr:nth-child(1)>td:nth-child(3) {\r\n                   width: 5% !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreDialogBoxWorkflow .crux-Cell .gwt-Label {\r\n                   word-break: break-all !important;\r\n                   white-space: normal !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr.columnHeadersRow.row>td:nth-child(3)>div>div>table>tbody>tr>td:nth-child(1)>div {\r\n                   word-break: normal !important;\r\n                   white-space: nowrap !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr:nth-child(2)>td:nth-child(1)>div>div {\r\n                   word-break: inherit !important;\r\n               }\r\n               \r\n               #propostaLivre_tramitarPropostaLivreHistoricoTramitacaoGrid>div>table>tbody>tr:nth-child(2)>td:nth-child(2)>div>div {\r\n                   word-break: inherit !important;\r\n               }", ""]);
+
+// exports
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -503,6 +430,12 @@ function toComment(sourceMap) {
 	return '/*# ' + data + ' */';
 }
 
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></meta>";
 
 /***/ }),
 /* 7 */
@@ -631,8 +564,8 @@ var CommandType;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var engine_1 = __webpack_require__(4);
-var actionsList = __webpack_require__(5);
+var engine_1 = __webpack_require__(2);
+var actionsList = __webpack_require__(3);
 engine_1.Engine.runActions(actionsList);
 
 
