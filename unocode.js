@@ -306,7 +306,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.getElementById("dm0m0");
+                var topo = document.querySelector("#precificacao");
 
                 console.log("Inserir topo");
                 return topo != null;
