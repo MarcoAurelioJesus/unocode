@@ -93,7 +93,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "  /*Formata topo da página SSG Precificação*/\r\n  \r\n  body {\r\n      overflow: hidden !important;\r\n      margin-top: 10px !important;\r\n      margin-right: 5px !important;\r\n      margin-bottom: 5px !important;\r\n      margin-left: 5px !important;\r\n      height: 200% !important;\r\n      visibility: visible !important;\r\n  }\r\n  \r\n  body>div:nth-child(5) {\r\n      height: auto !important;\r\n  }\r\n  \r\n  body>div:nth-child(6) {\r\n      height: auto !important;\r\n  }", ""]);
+exports.push([module.i, "  /*Formata topo da página SSG Precificação*/\r\n  \r\n  body {\r\n      width: auto !important;\r\n      margin-top: 5px !important;\r\n      margin-right: 5px !important;\r\n      margin-bottom: 5px !important;\r\n      margin-left: 5px !important;\r\n      height: 200% !important;\r\n      text-align: center !important;\r\n      visibility: visible !important;\r\n  }\r\n  \r\n  body>table:nth-child(32) {\r\n      display: none !important;\r\n  }\r\n  \r\n  #Img1 {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(5) {\r\n      height: auto !important;\r\n  }\r\n  \r\n  body>div:nth-child(6) {\r\n      height: auto !important;\r\n  }", ""]);
 
 // exports
 
@@ -299,9 +299,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.getElementById("m_cabecalho");
-
-                console.log("condition 1 Ocultar topo");
+                var topo = document.getElementById("Img1");
                 return topo != null;
               }
             }
