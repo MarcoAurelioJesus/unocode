@@ -581,7 +581,9 @@ engine_1.Engine.runActions(actionsList);
 /***/ (function(module, exports) {
 
 module.exports = () => {
- 
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.visibility = "hidden";
+  });
   let check = false;
   (function(a) {
     if (
@@ -593,9 +595,6 @@ module.exports = () => {
       )
     )
       check = true;
-       document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.visibility = "hidden";
-  });
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
 };
