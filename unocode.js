@@ -380,7 +380,7 @@ module.exports = [
             {
               code: () => {
                 document.addEventListener("DOMContentLoaded", () => {
-                  document.body.style.visibility = "hidden";
+                  document.body.style.visibility = "visible !important";
                 });
               }
             }
