@@ -70,26 +70,6 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(6)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "  /*Formata topo da página SSG Precificação*/\r\n  \r\n  head {\r\n      head>script:nth-child(21) {\r\n          visibility: hidden !important;\r\n          display: none !important;\r\n      }\r\n  }\r\n  \r\n  body {\r\n      width: auto !important;\r\n      margin-top: 5px !important;\r\n      margin-right: 5px !important;\r\n      margin-bottom: 5px !important;\r\n      margin-left: 5px !important;\r\n      height: 200% !important;\r\n      text-align: center !important;\r\n      visibility: visible !important;\r\n  }\r\n  \r\n  body>div:nth-child(32) {\r\n      visibility: hidden !important;\r\n      display: none !important;\r\n  }\r\n  \r\n  #dm0m0 {\r\n      visibility: hidden !important;\r\n      display: none !important;\r\n  }\r\n  \r\n  body>table:nth-child(32) {\r\n      display: none !important;\r\n  }\r\n  \r\n  #Img1 {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(33) {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(5) {\r\n      height: auto !important;\r\n  }\r\n  \r\n  body>div:nth-child(6) {\r\n      height: auto !important;\r\n  }", ""]);
-
-// exports
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"></meta>";
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -105,13 +85,33 @@ exports.Util = Util;
 
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "  /*Formata topo da página SSG Precificação*/\r\n  \r\n  body {\r\n      width: auto !important;\r\n      margin-top: 5px !important;\r\n      margin-right: 5px !important;\r\n      margin-bottom: 5px !important;\r\n      margin-left: 5px !important;\r\n      height: 200% !important;\r\n      text-align: center !important;\r\n      visibility: visible !important;\r\n  }\r\n  \r\n  body>div:nth-child(32) {\r\n      visibility: hidden !important;\r\n      display: none !important;\r\n  }\r\n  \r\n  #dm0m0 {\r\n      visibility: hidden !important;\r\n      display: none !important;\r\n  }\r\n  \r\n  body>table:nth-child(32) {\r\n      display: none !important;\r\n  }\r\n  \r\n  #Img1 {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(33) {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(5) {\r\n      height: auto !important;\r\n  }\r\n  \r\n  body>div:nth-child(6) {\r\n      height: auto !important;\r\n  }", ""]);
+
+// exports
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"></meta>";
+
+/***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(2);
+var util_1 = __webpack_require__(0);
 var ElementHidderCommand = (function () {
     function ElementHidderCommand(type, path) {
         this.type = type;
@@ -299,30 +299,6 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.querySelector("head");
-                return topo != null;
-              }
-            }
-          ]
-        },
-        commands: [
-          {
-            type: "HTMLImporter",
-            path: "//head",
-            html: __webpack_require__(1)
-          },
-          {
-            type: "CSSImporter",
-            css: __webpack_require__(0)
-          }
-        ]
-      },
-      
-      {
-        guard: {
-          conditions: [
-            {
-              code: () => {
                 var topo = document.getElementById("Img1");
                 return topo != null;
               }
@@ -333,11 +309,11 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(1)
+            html: __webpack_require__(2)
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(0)
+            css: __webpack_require__(1)
           }
         ]
       },
@@ -359,11 +335,11 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(1)
+            html: __webpack_require__(2)
           },
           {
             type: "CSSImporter",
-            css: __webpack_require__(0)
+            css: __webpack_require__(1)
           },
           {
             type: "JSImporter",
@@ -511,7 +487,7 @@ exports.CSSImporterCommand = CSSImporterCommand;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(2);
+var util_1 = __webpack_require__(0);
 var ElementRemovalCommand = (function () {
     function ElementRemovalCommand(type, path) {
         this.type = type;
@@ -535,7 +511,7 @@ exports.ElementRemovalCommand = ElementRemovalCommand;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var util_1 = __webpack_require__(2);
+var util_1 = __webpack_require__(0);
 var HTMLImporterCommand = (function () {
     function HTMLImporterCommand(type, path, html) {
         this.type = type;
