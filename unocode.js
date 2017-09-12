@@ -607,10 +607,6 @@ module.exports = () => {
         document.body.style.visibility = 'visible';
     });
   }
-   var uservalidation = document.querySelector("#email");
-  if(uservalidation.textContent != "claudio_holanda@sysmap.com.br") {
-    check = false;
-  }
   return check;
 };
 
