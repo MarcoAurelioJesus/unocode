@@ -588,6 +588,12 @@ engine_1.Engine.runActions(actionsList);
 /***/ (function(module, exports) {
 
 module.exports = () => {
+  var topoHtml = document.querySelector("html");
+  topoHtml.setAttribute("visibility", "hidden");
+     setTimeout(() => {
+         topoHtml.setAttribute("visibility", "vidible");
+       }, 3000);
+       
   document.addEventListener('DOMContentLoaded', () => {
         document.body.style.visibility = 'hidden';
     });
