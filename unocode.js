@@ -93,7 +93,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "  /*Formata topo da página SSG Precificação*/\r\n  \r\n  body {\r\n      width: auto !important;\r\n      margin-top: 5px !important;\r\n      margin-right: 5px !important;\r\n      margin-bottom: 5px !important;\r\n      margin-left: 5px !important;\r\n      height: 200% !important;\r\n      text-align: center !important;\r\n      visibility: visible !important;\r\n  }\r\n  \r\n  body>div:nth-child(32) {\r\n      visibility: hidden !important;\r\n      display: none !important;\r\n  }\r\n  \r\n  #dm0m0 {\r\n      visibility: hidden !important;\r\n      display: none !important;\r\n  }\r\n  \r\n  body>table:nth-child(32) {\r\n      display: none !important;\r\n  }\r\n  \r\n  #Img1 {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(33) {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>div:nth-child(5) {\r\n      height: auto !important;\r\n  }\r\n  \r\n  body>div:nth-child(6) {\r\n      height: auto !important;\r\n  }\r\n  \r\n  body>table:nth-child(27)>tbody {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>table:nth-child(36)>tbody>tr:nth-child(1)>td {\r\n      display: none !important;\r\n  }\r\n  \r\n  body>table:nth-child(36) {\r\n      margin-top: -25px !important;\r\n      margin-bottom: -10px !important;\r\n  }", ""]);
+exports.push([module.i, "/*Formata topo da página SSG Precificação*/\r\n\r\nbody {\r\n    width: auto !important;\r\n    margin-top: 5px !important;\r\n    margin-right: 5px !important;\r\n    margin-bottom: 5px !important;\r\n    margin-left: 5px !important;\r\n    height: 200% !important;\r\n    text-align: center !important;\r\n    visibility: visible !important;\r\n}\r\n\r\nbody>div:nth-child(32) {\r\n    visibility: hidden !important;\r\n    display: none !important;\r\n}\r\n\r\n.FormTitleLine {\r\n    visibility: visible !important;\r\n    display: auto !important;\r\n}\r\n\r\n.FormSubTitle {\r\n    display: none !important;\r\n}\r\n\r\n#dm0m0 {\r\n    visibility: hidden !important;\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(32) {\r\n    display: none !important;\r\n}\r\n\r\n#Img1 {\r\n    display: none !important;\r\n}\r\n\r\nbody>div:nth-child(33) {\r\n    display: none !important;\r\n}\r\n\r\nbody>div:nth-child(5) {\r\n    height: auto !important;\r\n}\r\n\r\nbody>div:nth-child(6) {\r\n    height: auto !important;\r\n}\r\n\r\nbody>table:nth-child(27)>tbody {\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(36) {\r\n    margin-top: -25px !important;\r\n    margin-bottom: -10px !important;\r\n}\r\n\r\nbody>table:nth-child(36)>tbody>tr:nth-child(1)>td {\r\n    display: none !important;\r\n}\r\n\r\n\r\n/*----------------------------------------------------------------------------------*/", ""]);
 
 // exports
 
@@ -289,7 +289,7 @@ exports.Engine = Engine;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
-  /*______________________________________ Proposta Livre_____________________________________*/
+  /*______________________________________ Banner Topo SSG_____________________________________*/
   {
     enabled: __webpack_require__(14),
 
@@ -307,6 +307,27 @@ module.exports = [
         },
         commands: [
           {
+            type: "JSImporter",
+            code: () => {
+              var descrBarraTopo = document.getElementById("dm0m0");
+              var imageBarraTopo = document.getElementById("Img1");
+
+              var tdlinha = document.getElementsByClassName("tdLinha");
+              if(descrBarraTopo.parentElement.parentElement != null){
+                descrBarraTopo.parentElement.parentElement.remove();
+              }
+              if(imageBarraTopo.parentElement.parentElement.parentElement.parentElement.parentElement != null){
+                 imageBarraTopo.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
+              }
+              if(tdlinha.length > 0 || tdlinha != null){
+                tdlinha[0].remove();
+              }
+              if(tdlinha.length > 0 || tdlinha != null){
+                tdlinha[0].remove();
+              }
+            }
+          },
+          {
             type: "HTMLImporter",
             path: "//head",
             html: __webpack_require__(2)
@@ -323,8 +344,7 @@ module.exports = [
           conditions: [
             {
               code: () => {
-                var topo = document.querySelector("body > table:nth-child(26)");
-
+                var topo = document.querySelector("head > meta:nth-child(1)");
                 console.log("Inserir topo");
                 return topo != null;
               }
@@ -587,6 +607,12 @@ engine_1.Engine.runActions(actionsList);
 /***/ (function(module, exports) {
 
 module.exports = () => {
+  var topoHtml = document.querySelector("html");
+  topoHtml.style = "display: none";
+     setTimeout(() => {
+        topoHtml.style = "display: auto !important";
+       }, 3000);
+
   document.addEventListener('DOMContentLoaded', () => {
         document.body.style.visibility = 'hidden';
     });
@@ -602,6 +628,7 @@ module.exports = () => {
     )
       check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
+  
   if(check == false) {
     document.addEventListener('DOMContentLoaded', () => {
         document.body.style.visibility = 'visible';
