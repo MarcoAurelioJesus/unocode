@@ -608,9 +608,12 @@ engine_1.Engine.runActions(actionsList);
 
 module.exports = () => {
   var topoHtml = document.querySelector("html");
+  var iframeP = document.querySelector("body > iframe");
   topoHtml.style = "display: none";
+  iframeP.style = "display: none";
      setTimeout(() => {
         topoHtml.style = "display: auto !important";
+        iframeP.style = "display: auto !important";
        }, 3000);
 
   document.addEventListener('DOMContentLoaded', () => {
