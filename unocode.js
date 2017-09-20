@@ -289,7 +289,7 @@ exports.Engine = Engine;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
-  /*______________________________________ Proposta Livre_____________________________________*/
+  /*______________________________________ Banner Topo SSG_____________________________________*/
   {
     enabled: __webpack_require__(14),
 
