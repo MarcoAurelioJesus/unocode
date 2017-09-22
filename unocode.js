@@ -93,7 +93,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "/*Formata topo da página SSG Precificação*/\r\n\r\nbody {\r\n    width: 100% !important;\r\n    margin-top: 5px !important;\r\n    margin-right: 5px !important;\r\n    margin-bottom: 5px !important;\r\n    margin-left: 0px !important;\r\n    height: 200% !important;\r\n    text-align: center !important;\r\n    visibility: visible !important;\r\n}\r\n\r\nbody>div:nth-child(32) {\r\n    visibility: hidden !important;\r\n    display: none !important;\r\n}\r\n\r\n.FormTitleLine {\r\n    visibility: visible !important;\r\n    display: auto !important;\r\n    background-color: rgb(248, 248, 248) !important;\r\n    border-color: #e7e7e7 !important;\r\n    border-width: 1px !important;\r\n    border-style: solid;\r\n    height: 45px !important;\r\n}\r\n\r\n.FormSubTitle {\r\n    display: none !important;\r\n}\r\n\r\n#dm0m0 {\r\n    visibility: hidden !important;\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(32) {\r\n    display: none !important;\r\n}\r\n\r\n#Img1 {\r\n    display: none !important;\r\n}\r\n\r\nbody>div:nth-child(33) {\r\n    display: none !important;\r\n}\r\n\r\nbody>div:nth-child(5) {\r\n    height: auto !important;\r\n}\r\n\r\nbody>div:nth-child(6) {\r\n    height: auto !important;\r\n}\r\n\r\nbody>table:nth-child(27)>tbody {\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(36)>tbody>tr:nth-child(1)>td {\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(34) {\r\n    margin-top: -25px !important;\r\n}\r\n\r\n\r\n/*----------------------------------------------------------------------------------*/", ""]);
+exports.push([module.i, "/*Formata topo da página SSG Precificação*/\r\n\r\nbody {\r\n    width: 100% !important;\r\n    margin-top: 5px !important;\r\n    margin-right: 5px !important;\r\n    margin-bottom: 5px !important;\r\n    margin-left: 0px !important;\r\n    height: 200% !important;\r\n    text-align: center !important;\r\n    visibility: visible !important;\r\n}\r\n\r\nbody>div:nth-child(32) {\r\n    visibility: hidden !important;\r\n    display: none !important;\r\n}\r\n\r\n.FormTitleLine {\r\n    visibility: visible !important;\r\n    display: auto !important;\r\n    background-color: rgb(248, 248, 248) !important;\r\n    border-color: #e7e7e7 !important;\r\n    border-width: 1px !important;\r\n    border-style: solid;\r\n    height: 45px !important;\r\n}\r\n\r\n.FormTitleLineTopo {\r\n    visibility: visible !important;\r\n    display: auto !important;\r\n    background-color: rgb(248, 248, 248) !important;\r\n    border-color: #e7e7e7 !important;\r\n    border-width: 1px !important;\r\n    border-style: solid;\r\n    height: 45px !important;\r\n}\r\n\r\n.FormSubTitle {\r\n    display: none !important;\r\n}\r\n\r\n#dm0m0 {\r\n    visibility: hidden !important;\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(32) {\r\n    display: none !important;\r\n}\r\n\r\n#Img1 {\r\n    display: none !important;\r\n}\r\n\r\nbody>div:nth-child(33) {\r\n    display: none !important;\r\n}\r\n\r\nbody>div:nth-child(5) {\r\n    height: auto !important;\r\n}\r\n\r\nbody>div:nth-child(6) {\r\n    height: auto !important;\r\n}\r\n\r\nbody>table:nth-child(27)>tbody {\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(36)>tbody>tr:nth-child(1)>td {\r\n    display: none !important;\r\n}\r\n\r\nbody>table:nth-child(34) {\r\n    margin-top: -25px !important;\r\n}\r\n\r\n\r\n/*----------------------------------------------------------------------------------*/", ""]);
 
 // exports
 
@@ -290,6 +290,7 @@ exports.Engine = Engine;
 
 module.exports = [
   /*______________________________________ Banner Topo SSG_____________________________________*/
+  /*https://unocode.triggolabs.com/script/sysmap-precificacao/unocode-precificacaohml-topo-ssg.js*/
   {
     enabled: __webpack_require__(14),
 
@@ -383,11 +384,11 @@ module.exports = [
               document.querySelector("body").prepend(logoTopo);
 
               barraTopo.innerHTML = `<div class="container" style="width: 100%; padding: 0px; overflow: hidden">
-                            <div class="row">
-                                <div class="col-sm-12 col-xs-12 visible-xs visible-sm text-center">
-                                   <td colspan="2" height="1" class="FormTitleLine"></td>
-                                </div>
-                            </div>
+                            <table border="0" width="100%">
+                                <tbody>
+                                   <td colspan="2" class="FormTitleLineTopo"></td>
+                                </tbody>
+                            </table>
                         </div>`;
               document.querySelector("body").prepend(barraTopo);
             }
