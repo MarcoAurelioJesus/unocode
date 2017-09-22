@@ -367,7 +367,7 @@ module.exports = [
             code: () => {
               var logoTopo = document.createElement("div");
               var barraTopo = document.createElement("div");
-              logoTopo.innerHTML = `<div class="container" style="width: 100%; padding: 0px; overflow: hidden">
+              {logoTopo.innerHTML = `<div class="container" style="width: 100%; padding: 0px; overflow: hidden">
                             <div class="row">
                                 <table border="0" width="100%">
                                 <tbody>
@@ -386,7 +386,8 @@ module.exports = [
                             </div>
                         </div>`;
               document.querySelector("body").prepend(logoTopo);
-
+            }
+            {
               barraTopo.innerHTML = `<div class="container" style="width: 100%; padding: 0px; overflow: hidden">
                             <table border="0" width="100%">
                                 <tbody>
@@ -395,6 +396,7 @@ module.exports = [
                             </table>
                         </div>`;
               document.querySelector("body").prepend(barraTopo);
+              }
             }
           }
         ]
