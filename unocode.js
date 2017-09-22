@@ -387,7 +387,9 @@ module.exports = [
                         </div>`;
               document.querySelector("body").prepend(logoTopo);
             }
+
             {
+              var barraTopo = document.createElement("div");
               barraTopo.innerHTML = `<div class="container" style="width: 100%; padding: 0px; overflow: hidden">
                             <table border="0" width="100%">
                                 <tbody>
