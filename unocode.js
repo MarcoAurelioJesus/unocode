@@ -372,13 +372,11 @@ exports.Engine = Engine;
 
 module.exports = [
   /*______________________________________ Banner Topo SSG_____________________________________*/
-
  /*
  https://unocode.triggolabs.com/script/sysmap-precificacao/unocode-topo-ssghml.js"></script>
  URL HML
  https://rawgit.com/MarcoAurelioJesus/unocode/master/unocode.js
  */
- 
   {
     enabled: __webpack_require__(15),
 
@@ -388,8 +386,8 @@ module.exports = [
           conditions: [
             {
               code: () => {
-               /* var topo = document.getElementById("Img1");
-                return topo != null;*/
+                var topo = document.getElementById("Img1");
+                return topo != null;
               }
             }
           ]
@@ -462,7 +460,7 @@ module.exports = [
           {
             type: "JSImporter",
             code: () => {
-             /* var barraTopo = document.createElement("div");
+              var barraTopo = document.createElement("div");
               var logoTopo = document.createElement("div");
               var barraTopo2 = document.createElement("div");
               barraTopo.innerHTML = `<div class="barrasTopo" style="width: 100%"></div>`;
@@ -486,7 +484,7 @@ module.exports = [
               document.querySelector("body").prepend(barraTopo);         
               var barraAzul = document.getElementsByClassName("FormSubTitle");
               barraAzul[0].parentElement.parentElement.parentElement.id = "barraAzul";
-*/
+
             }
           }
         ]
@@ -504,7 +502,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".PRECIFICACAO-loader {\r\n    position: fixed;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100vw !important;\r\n    height: 100vh !important;\r\n    background: #fff;\r\n    opacity: 0;\r\n    z-index: 10000;\r\n    justify-content: center;\r\n    align-items: flex-start;\r\n    pointer-events: none;\r\n    display: flex;\r\n    transition: opacity 0.3s linear;\r\n}\r\n\r\n.PRECIFICACAO-loader.visible {\r\n    opacity: 0;\r\n    pointer-events: all;\r\n}\r\n\r\n.PRECIFICACAO-loader-img {\r\n    position: fixed !important;\r\n    margin-top: 200px !important;\r\n}", ""]);
+exports.push([module.i, ".PRECIFICACAO-loader {\r\n    position: fixed;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100vw !important;\r\n    height: 100vh !important;\r\n    background: #fff;\r\n    opacity: 0;\r\n    z-index: 10000;\r\n    justify-content: center;\r\n    align-items: flex-start;\r\n    pointer-events: none;\r\n    display: flex;\r\n    transition: opacity 0.3s linear;\r\n}\r\n\r\n.PRECIFICACAO-loader.visible {\r\n    opacity: 1;\r\n    pointer-events: all;\r\n}\r\n\r\n.PRECIFICACAO-loader-img {\r\n    position: fixed !important;\r\n    margin-top: 200px !important;\r\n}", ""]);
 
 // exports
 
@@ -711,7 +709,7 @@ module.exports = () => {
        setTimeout(() => {
           document.body.style.overflow = '';
         }, 300);
-      }, 2000);
+      }, 3000);
     }
   }, 200);
 };
