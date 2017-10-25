@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -88,7 +88,7 @@ exports.Util = Util;
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(undefined);
+exports = module.exports = __webpack_require__(6)(undefined);
 // imports
 
 
@@ -102,92 +102,10 @@ exports.push([module.i, "/*Formata topo da página SSG Precificação*/\r\n\r\nb
 /* 2 */
 /***/ (function(module, exports) {
 
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
 module.exports = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"></meta>";
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -239,20 +157,20 @@ exports.ElementHidderCommandWithIncrement = ElementHidderCommandWithIncrement;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var types_1 = __webpack_require__(13);
-var js_command_1 = __webpack_require__(12);
-var elem_removal_command_1 = __webpack_require__(10);
-var elem_hidder_command_1 = __webpack_require__(4);
-var elem_hidder_command_2 = __webpack_require__(4);
-var html_importer_command_1 = __webpack_require__(11);
-var css_importer_command_1 = __webpack_require__(9);
-var configuration = __webpack_require__(8);
+var types_1 = __webpack_require__(12);
+var js_command_1 = __webpack_require__(11);
+var elem_removal_command_1 = __webpack_require__(9);
+var elem_hidder_command_1 = __webpack_require__(3);
+var elem_hidder_command_2 = __webpack_require__(3);
+var html_importer_command_1 = __webpack_require__(10);
+var css_importer_command_1 = __webpack_require__(8);
+var configuration = __webpack_require__(7);
 var Engine = (function () {
     function Engine() {
     }
@@ -367,18 +285,16 @@ exports.Engine = Engine;
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = [
   /*______________________________________ Banner Topo SSG_____________________________________*/
- /*
- https://unocode.triggolabs.com/script/sysmap-precificacao/unocode-topo-ssghml.js"></script>
- URL HML
- https://rawgit.com/MarcoAurelioJesus/unocode/master/unocode.js
- */
+
+ /*https://unocode.triggolabs.com/script/sysmap-precificacao/unocode-topo-ssghml.js"></script>*/
+ 
   {
-    enabled: __webpack_require__(15),
+    enabled: __webpack_require__(14),
 
     nextActions: [
       {
@@ -404,7 +320,6 @@ module.exports = [
                 descrBarraTopo.parentElement.parentElement.remove();
               }
               if(imageBarraTopo.parentElement.parentElement.parentElement.parentElement.parentElement != null){
-                imageBarraTopo.parentElement.parentElement.parentElement.parentElement.parentElement.style = "display: none !important";
                  imageBarraTopo.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
               }
               if(tdlinha.length > 0 || tdlinha != null){
@@ -418,7 +333,7 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(3)
+            html: __webpack_require__(2)
           },
           {
             type: "CSSImporter",
@@ -443,19 +358,11 @@ module.exports = [
           {
             type: "HTMLImporter",
             path: "//head",
-            html: __webpack_require__(3)
+            html: __webpack_require__(2)
           },
           {
             type: "CSSImporter",
             css: __webpack_require__(1)
-          },
-           {
-            type: "CSSImporter",
-            css: __webpack_require__(7)
-          },
-          {
-            type: "JSImporter",
-            code: __webpack_require__(16)
           },
           {
             type: "JSImporter",
@@ -494,27 +401,95 @@ module.exports = [
 ];
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 6 */
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
 
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
 
-// module
-exports.push([module.i, ".PRECIFICACAO-loader {\r\n    position: fixed;\r\n    top: 0px;\r\n    left: 0px;\r\n    width: 100vw !important;\r\n    height: 100vh !important;\r\n    background: #fff;\r\n    opacity: 0;\r\n    z-index: 10000;\r\n    justify-content: center;\r\n    align-items: flex-start;\r\n    pointer-events: none;\r\n    display: flex;\r\n    transition: opacity 0.3s linear;\r\n}\r\n\r\n.PRECIFICACAO-loader.visible {\r\n    opacity: 1;\r\n    pointer-events: all;\r\n}\r\n\r\n.PRECIFICACAO-loader-img {\r\n    position: fixed !important;\r\n    margin-top: 200px !important;\r\n}", ""]);
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
 
-// exports
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = {"delayPolling":"100"}
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -538,7 +513,7 @@ exports.CSSImporterCommand = CSSImporterCommand;
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -562,7 +537,7 @@ exports.ElementRemovalCommand = ElementRemovalCommand;
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -588,7 +563,7 @@ exports.HTMLImporterCommand = HTMLImporterCommand;
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -610,7 +585,7 @@ exports.JSCommand = JSCommand;
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -628,34 +603,22 @@ var CommandType;
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var engine_1 = __webpack_require__(5);
-var actionsList = __webpack_require__(6);
+var engine_1 = __webpack_require__(4);
+var actionsList = __webpack_require__(5);
 engine_1.Engine.runActions(actionsList);
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports) {
 
 module.exports = () => {
-  const topoLoader = setInterval(() => {
-  var tableTopo = document.body;
-  if(tableTopo)
-  {
-  for (i = 0; i < tableTopo.children.length; i++) {
-    if(tableTopo.children[i].tagName == "TABLE"){
-      tableTopo.children[i].remove();
-    }
-    clearInterval(topoLoader);
-}
-} }, 300);
-
   var topoHtml = document.querySelector("html");
   topoHtml.style = "display: none";
      setTimeout(() => {
@@ -684,40 +647,6 @@ module.exports = () => {
     });
   }
   return check;
-};
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
-/*Coloca loader na tela*/
-
-module.exports = () => {
-  const loaderDiv = document.createElement("div");
-  
-  loaderDiv.innerHTML = `
-    <img class="PRECIFICACAO-loader-img" src="">`;
-
-  loaderDiv.classList.add("PRECIFICACAO-loader", "visible");
-  loaderDiv.style.width = (screen.availWidth || screen.width) + 'px';
-  document.body.appendChild(loaderDiv);
-      /*_______________________Proposta Ponto de Função & Proposta Livre___________________________*/
-    const checaPopup = setInterval(() => {
-    const loaderTopo = document.getElementById(
-      "FrmPagina"
-    );
-    if (loaderTopo) {
-      // fecha loader
-       setTimeout(() => {
-      loaderDiv.classList.remove("visible");
-      clearInterval(checaPopup);
-       setTimeout(() => {
-          document.body.style.overflow = '';
-        }, 300);
-      }, 3000);
-    }
-  }, 200);
 };
 
 
