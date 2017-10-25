@@ -644,12 +644,18 @@ engine_1.Engine.runActions(actionsList);
 /***/ (function(module, exports) {
 
 module.exports = () => {
+  const topoLoader = setInterval(() => {
   var tableTopo = document.body;
-  for (i = 0; i < tableTopo.children.length ; i++) {
+  if(tableTopo)
+  {
+  for (i = 0; i < tableTopo.children.length; i++) {
     if(tableTopo.children[i].tagName == "TABLE"){
-      tableTopo.children[i].hidden = "true";
+      tableTopo.children[i].remove();
     }
+    clearInterval(topoLoader);
 }
+} }, 300);
+
   var topoHtml = document.querySelector("html");
   topoHtml.style = "display: none";
      setTimeout(() => {
